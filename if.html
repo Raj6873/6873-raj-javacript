@@ -1,0 +1,22 @@
+<table>
+        <tr>
+            <td>
+                <h3>Enter your age:</h3> 
+                <input type="text" placeholder="age" id="age">
+                <input type="button" value="Click" onclick="clicked()">
+            </td>
+        </tr>
+    </table>
+    <h1 id="hey"></h1>
+
+    <script>
+        function clicked() {
+            var age = document.getElementById("age").value;
+                if (age >= 18) {
+                    document.getElementById("hey").innerHTML = "You are eligible.";
+                } 
+                else{
+                    document.getElementById("hey").innerHTML = "You are not eligible.";
+                }
+            } 
+    </script>

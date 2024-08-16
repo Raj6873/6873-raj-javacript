@@ -1,0 +1,26 @@
+<table border="1" cellpadding="1">
+    <tr>
+        <td>miter:</td>
+        <td><input type="text" id="m"></td>
+    </tr>
+    <tr>
+        <td>Click</td>
+        <td><input type="button" value="Click" onclick="feet()"></td>
+    </tr>
+</table>
+<h3 id="ans"></h3>
+<script>
+    function feet() {
+        var miter= parseFloat(document.getElementById('m').value);
+        var feet =miter*3.28; 
+
+        document.getElementById("ans").innerHTML = "Your answer = " + feet + " feet"; 
+    }
+</script>
+
+<script>
+    var m=parseInt(prompt("miter to foot"));
+    var ans=m*3.28;
+
+    console.log("ans = "+ans);
+</script>

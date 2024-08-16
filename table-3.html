@@ -1,0 +1,24 @@
+<table border="1">
+    <tr>
+        <td>c</td>
+        <td><input type="text" value="enter number" id="a"></td>
+    </tr>
+    <tr>
+        <td>f</td>
+        <td><input type="text" value="enter number" id="b"></td>
+    </tr>
+    <tr>
+        <td>click</td>
+        <td><input type="button" value="click" onclick="first()"></td>
+    </tr>
+</table>
+<h2 id="ans"></h2>
+<script>
+    function first(){
+        var a=parseInt(document.getElementById("a").value);
+        var b=parseInt(document.getElementById("b").value);
+
+        var ans=a+b;
+        document.getElementById("ans").innerHTML="your anser:"+ans;
+    }
+</script>

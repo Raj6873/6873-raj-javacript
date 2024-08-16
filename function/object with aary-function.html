@@ -1,0 +1,41 @@
+<script>
+    let arr =[
+        {name:"ankit" ,id: 1, sallery: 10000},
+        {name:"nen" ,id: 2, sallery: 40000},
+        {name:"jay" ,id: 3, sallery: 11000},
+        {name:"shruti",id: 4, sallery: 15000},
+        {name:"jb" ,id: 5, sallery: 10000},
+        {name:"arpit" ,id: 6, sallery: 1000},
+        {name:"yes",id: 7, sallery: 20000},
+    ]
+    console.log(arr)
+
+    let newArr =arr.reduce((acc ,cv)=>{
+        let sum=0;
+        if(cv.sallery>20000){
+            sum+=cv.sallery
+        }
+        return sum
+    }, 1000)
+    console.log(newArr);
+
+
+    // loop on object
+
+    // let obj ={
+    //     a:1,
+    //     b:2,
+    //     c:3,
+    //     d:4,
+    // }
+    // for(let key in obj){
+    //     console.log(obj[key])
+    // }
+
+    // const person ={fname:"nen",lname:"done",age:25};
+
+    // for(let key in person){
+    //     console.log(person[key])
+    // }
+    
+</script>

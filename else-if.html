@@ -1,0 +1,24 @@
+<script>
+ 
+    // else-if ladder
+    var s1=parseInt(prompt("enter your s1 marks"));
+    var s2=parseInt(prompt("enter your s2 marks"));
+    var ans=s1+s2;
+    console.log("your total marks:"+ans);
+    var avg=ans/2;
+    console.log("your total avg="+avg+"%");
+
+    if(avg>10 && avg<=30){
+        console.log("your grade is C");
+    }
+    else if(avg>30 && avg<=60){
+        console.log("your grade is B");
+    }
+    else if(avg>60 && avg<=100){
+        console.log("your grade is A");
+    }
+
+    else{
+        console.log("you are fail....best of luck")
+    }
+</script>
