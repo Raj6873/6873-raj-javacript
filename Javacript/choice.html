@@ -1,0 +1,41 @@
+<script>
+    var choice = parseInt(prompt("Enter your choice: |1. Additional |2. Subtraction |3. Multiplication |4. Division"));
+
+    if (choice == 1) {
+        alert("Thank you for choosing 1 (Additional)");
+        var s1 = parseInt(prompt("Enter your first number"));
+        var s2 = parseInt(prompt("Enter your second number"));
+        var ans = s1 + s2;
+        console.log("Your total sum = " + ans);
+        alert("Your total sum = " + ans);
+    } 
+    else if (choice == 2) {
+        alert("Thank you for choosing 2 (Subtraction)");
+        var s1 = parseInt(prompt("Enter your first number"));
+        var s2 = parseInt(prompt("Enter your second number"));
+        var ans = s1 - s2;
+        console.log("Your total subtraction = " + ans);
+        alert("Your total subtraction = " + ans);
+    }
+     else if (choice == 3) {
+        alert("Thank you for choosing 3 (Multiplication)");
+        var s1 = parseInt(prompt("Enter your first number"));
+        var s2 = parseInt(prompt("Enter your second number"));
+        var ans = s1 * s2;
+        console.log("Your total multiplication = " + ans);
+        alert("Your total multiplication = " + ans);
+    } 
+    else if (choice == 4) {
+        alert("Thank you for choosing 4 (Division)");
+        var s1 = parseInt(prompt("Enter your first number"));
+        var s2 = parseInt(prompt("Enter your second number"));
+        var ans = s1 / s2;
+        console.log("Your total division = " + ans);
+        alert("Your total division = " + ans);
+    } 
+    else {
+        console.log("Invalid choice");
+        alert("Invalid choice");
+    }
+</script>
+    

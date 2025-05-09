@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let user = {
+//     name : "karan"
+// }
+
+// let user2 = {
+//     hobbies : ["playing" , "dancing"]
+// }
+
+// let user3 = {
+//     age : 14 
+// }
+
+// let user4 = {
+//     color : "red"
+// }
+
+// 1.type 
+// Object.setPrototypeOf(user,user2)
+// Object.setPrototypeOf(user2,user3)
+// Object.setPrototypeOf(user3,user4)
+// console.log(user);
+// console.log(user.hobbies);
+// console.log(user.age);
+// console.log(user.color);
+
+
+// 2.type 
+// console.log(user,user2,{county : "india"},{certifai : "insurence"});
+
+
+// ========================================================================
+
+// CLASS METHODE 
+// inheritence with classes ES6
+// sugar coating as syntax extension
+
+// class car1 {
+//     constructor(model , make) {
+//         this.model = model
+//         this.make = make
+//     }
+// }
+
+// class car2 extends car1 {
+//     constructor(model , make) {
+//         super(model , make)
+//     }
+
+//     getCar() {
+//         console.log(`this car's model is ${this.model}, and its brand is ${this.make}.`)
+//     }
+// }
+
+//  let car3  = new car1("plastices" , "Tata");
+// console.log(car3);
+
+// inheritance pratices qustion 
+
+// 1.
+// let vehicles = {
+//     type : "unknow",
+//     start : "unknow",
+//     stop : "unknow",
+// }
+
+// let car = {
+//     type : "Tata",
+//     start : "2005",
+//     stop : "2011",
+// }
+
+// let motorcycle = {
+//     type : "Suzuki",
+//     start : "2001",
+//     stop : "2011",
+// }
+
+class vehicles {
+    constructor(type) {
+        this.type = type
+    }
+    strat (){
+        console.log("the vehicles is start");
+    }
+    stop (){
+        console.log("the vehicles is stop");
+    }
+}
+
+// let car = new vehicles("car" )
+
+// let motitcycle = new vehicles("motorcycle")
+
+
+class car extends vehicles {
+    // constructor(parameters) {
+         
+    // }
+    strat (){
+        console.log(`${this.type} car is started..`);
+    }
+
+}
+
+let car1 = new car("electric")
+car1.strat()
+
+
+// array pratices 
+
+function reverStr(str) {
+    let rever = '';
+
+    for (let i = str.length - 1; i >= 0; i--) {
+        
+        rever = rever + str[i]
+    }
+
+    if (reverStr === rever) {
+        console.log("That is rever string");
+        
+    } else {
+        console.log("That is not rever string");
+    }
+}
+    
+// console.log("rever");
+// console.log(reverStr("level"));
+reverStr("level")
+
+
+class animal {
+  
+}
+</script>
+</html>

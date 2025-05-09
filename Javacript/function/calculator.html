@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculator</title>
+        <style>
+        td {
+            text-align: center;
+            padding: 20px;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .equal {
+            background-color: orange;
+            color: white;
+        }
+        #result {
+            background-color: black;
+            color: white;
+            padding: 35px 15px;
+            text-align: right;
+            font-size: 20px;
+        }
+    </style>
+    </head>
+    <body>
+        <center>
+            <h1>Calculator App</h1>
+            <table border="1" cellspacing="6" cellpadding="5">
+                <tr>
+                    <td colspan="4" id="result"></td>
+                </tr>
+                <tr>
+                    <td onclick="clearResult()">C</td>
+                    <td onclick="appendNumber('()')">()</td>
+                    <td onclick="appendNumber('%')">%</td>
+                    <td onclick="appendOperator('/')">/</td>
+                </tr>
+                <tr>
+                    <td onclick="appendNumber('7')">7</td>
+                    <td onclick="appendNumber('8')">8</td>
+                    <td onclick="appendNumber('9')">9</td>
+                    <td onclick="appendOperator('*')">*</td>
+                </tr>
+                <tr>
+                    <td onclick="appendNumber('4')">4</td>
+                    <td onclick="appendNumber('5')">5</td>
+                    <td onclick="appendNumber('6')">6</td>
+                    <td onclick="appendOperator('-')">-</td>
+                </tr>
+                <tr>
+                    <td onclick="appendNumber('1')">1</td>
+                    <td onclick="appendNumber('2')">2</td>
+                    <td onclick="appendNumber('3')">3</td>
+                    <td onclick="appendOperator('+')">+</td>
+                </tr>
+                <tr>
+                    <td onclick="appendNumber('0')">+/-</td>
+                    <td onclick="appendNumber('0')">0</td>
+                    <td onclick="appendDecimal()">.</td>
+                    <td onclick="calculate()" class="equal">=</td>
+                </tr>
+            </table>
+        </center>
+
+        <script>
+        let result = document.getElementById('result');
+        let expression = '';
+
+        function appendNumber(num) {
+            expression += num;
+            result.textContent = expression;
+        }
+
+        function appendOperator(symbol) {
+            expression += ' ' + symbol + ' ';
+            result.textContent = expression;
+        }
+
+        function appendDecimal() {
+            if (!expression.includes('.')) {
+                expression += '.';
+                result.textContent = expression;
+            }
+        }
+
+        function clearResult() {
+            expression = '';
+            result.textContent = expression;
+        }
+
+        function calculate() {
+            try {
+                let answer = eval(expression.replace( '*').replace('**'));
+                result.textContent = answer;
+                expression = '';
+            } catch (error) {
+                result.textContent = 'Error';
+            }
+        }
+    </script>
+    </body>
+</html>
